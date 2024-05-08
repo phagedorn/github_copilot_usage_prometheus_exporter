@@ -18,7 +18,6 @@ def fetch_github_metrics(enterprise_name, org_name, github_token):
         )
         enterprise_response.raise_for_status()  # Raise an exception if the response contains an HTTP error status code
         enterprise_data = enterprise_response.json()
-        print(json.dumps(enterprise_data, indent=4))  # Pretty print the JSON response data
 
     except requests.exceptions.RequestException as e:
         print(f"An error occurred while fetching the enterprise usage data: {e}")
@@ -49,8 +48,7 @@ def fetch_github_metrics(enterprise_name, org_name, github_token):
         headers={'Authorization': f'Bearer {github_token}'}
     )
     org_data = org_response.json()
-    #print(json.dumps(org_data, indent=4))  # Pretty print the JSON response data
-
+    
     # Update Prometheus metrics for organization
     if isinstance(org_data, dict):  # Check if org_data is a dictionary
         for key, value in org_data.items():
