@@ -73,4 +73,4 @@ def main():
         time.sleep(60)  # fetch every 60 seconds
 
 if __name__ == "__main__":
-    main()%
+    main()
