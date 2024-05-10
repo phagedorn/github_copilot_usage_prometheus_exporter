@@ -31,7 +31,6 @@
             "color": {
               "mode": "thresholds"
             },
-            "displayName": "Actice Users",
             "mappings": [],
             "thresholds": {
               "mode": "absolute",
@@ -42,7 +41,7 @@
                 },
                 {
                   "color": "red",
-                  "value": 80
+                  "value": 290
                 }
               ]
             }
@@ -125,7 +124,7 @@
             "hide": false,
             "includeNullMetadata": true,
             "instant": true,
-            "legendFormat": "__auto",
+            "legendFormat": "Inactive Users",
             "range": false,
             "refId": "C",
             "useBackend": false
@@ -143,13 +142,13 @@
             "hide": false,
             "includeNullMetadata": true,
             "instant": true,
-            "legendFormat": "__auto",
+            "legendFormat": "License consumed",
             "range": false,
             "refId": "D",
             "useBackend": false
           }
         ],
-        "title": "PanelCopilot Usage",
+        "title": "Copilot Usage",
         "type": "bargauge"
       },
       {
@@ -282,7 +281,7 @@
                 },
                 {
                   "color": "red",
-                  "value": 80
+                  "value": 280
                 }
               ]
             }
@@ -309,6 +308,7 @@
             "values": false
           },
           "showPercentChange": false,
+          "text": {},
           "textMode": "auto",
           "wideLayout": true
         },
@@ -354,7 +354,7 @@
                 },
                 {
                   "color": "red",
-                  "value": 80
+                  "value": 20
                 }
               ]
             }
@@ -458,7 +458,7 @@
                 },
                 {
                   "color": "red",
-                  "value": 80
+                  "value": 20
                 }
               ]
             }
@@ -970,6 +970,6 @@
     "timezone": "browser",
     "title": "GitHub Copilot Usage",
     "uid": "ddl9xkxwzyqyod",
-    "version": 4,
+    "version": 17,
     "weekStart": ""
   }
