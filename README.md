@@ -11,24 +11,37 @@ This project is a Prometheus exporter for GitHub Copilot usage data. It fetches 
 
 1. Clone the repository:
 
-   ```$ git clone https://github.com/yourusername/github-copilot-prometheus-exporter.git```
+   ```
+   $ git clone https://github.com/yourusername/github-copilot-prometheus-exporter.git
+   ```
 
 2. Navigate to the project directory:
 cd github-copilot-prometheus-exporter
 
 3. Install the required Python packages:
-pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 1. Set the following environment variables:
    - `GITHUB_TOKEN`: Your GitHub personal access token
    - `ENTERPRISE_NAME`: The name of your GitHub Enterprise
-   -  `ORG_NAME`: The name of your GitHub Organization
+   - `ORG_NAME`: The name of your GitHub Organization
+
+   Example:
+   ```
+   export GITHUB_TOKEN="asd9ausd9uasd9u9a9u9uasd"
+   export ENTERPRISE_NAME="YOUR_ENTERPRISE_NAME"
+   export ORG_NAME="YOUR_ORG_NAME"
+   ```
 
 2. Run the exporter:
 
-   ```$ python github-copilot-prometheus-exporter.py```
+   ```
+   $ python github-copilot-prometheus-exporter.py
+   ```
 
 The exporter will start a server on port 8000 and fetch data periodically.
 
