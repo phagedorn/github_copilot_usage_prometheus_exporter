@@ -1,3 +1,5 @@
+![Example Image](dalle.png)
+
 # GitHub Copilot Usage Prometheus Exporter
 
 This project is a Prometheus exporter for GitHub Copilot usage data. It fetches data from the GitHub API and exposes it as Prometheus metrics.
