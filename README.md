@@ -1,4 +1,4 @@
-![Example Image](dalle.png)
+![Example Image](usage.png)
 
 # GitHub Copilot Usage Prometheus Exporter
 
