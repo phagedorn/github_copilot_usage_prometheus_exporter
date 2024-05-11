@@ -503,7 +503,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "builder",
-          "expr": "sum(sum_over_time(github_enterprise_copilot_usage{metric_name=~\".+lines_suggested\"}[$__interval]))",
+          "expr": "sum(avg_over_time(github_enterprise_copilot_usage{metric_name=~\".+lines_suggested\"}[$__interval]))",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -519,7 +519,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "builder",
-          "expr": "sum(sum_over_time(github_enterprise_copilot_usage{metric_name=\".+lines_accepted\"}[$__interval]))",
+          "expr": "sum(avg_over_time(github_enterprise_copilot_usage{metric_name=~\".+lines_accepted\"}[$__interval]))",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -1004,13 +1004,13 @@
     "list": []
   },
   "time": {
-    "from": "now-30d",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "GitHub Copilot Usage",
   "uid": "ddl9xkxwzyqyod",
-  "version": 20,
+  "version": 21,
   "weekStart": ""
 }
