@@ -18,9 +18,9 @@ services:
       - monitoring
 
   prometheus:
-    image: prom/prometheus:v2.30.3
+    image: prom/prometheus
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
     networks:
@@ -38,7 +38,12 @@ services:
         GF_AUTH_DISABLE_SIGNOUT_MENU: "true"
         GF_AUTH_DISABLE_LOGIN_FORM: "true"
       volumes:
-        - ./prometheus_ds.yml:/etc/grafana/provisioning/datasources/prometheus_ds.yml
+        - ./grafana/datasources:/etc/grafana/provisioning/datasources
+        - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+        - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+      environment:
+        - GF_AUTH_ANONYMOUS_ENABLED=true
+        - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       ports:
         - 3000:3000
       networks:
