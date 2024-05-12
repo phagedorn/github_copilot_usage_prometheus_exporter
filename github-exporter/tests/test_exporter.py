@@ -1,5 +1,7 @@
 import unittest
+import sys
 from unittest.mock import patch, MagicMock
+sys.path.append('../github_copilot_usage_prometheus_exporter')
 from prometheus_client.core import GaugeMetricFamily
 
 # Import the script/module you want to test
