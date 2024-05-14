@@ -47,6 +47,22 @@ cd github-copilot-prometheus-exporter
 
 The exporter will start a server on port 8000 and fetch data periodically.
 
+## Running with Docker Compose
+
+1. Create a `.env` file in the root directory of the project with the following content:
+
+    ```env
+    GITHUB_TOKEN=your_github_token
+    ENTERPRISE_NAME=your_enterprise_name
+    ORG_NAME=your_org_name
+    ```
+
+2. Build and run the Docker container using Docker Compose:
+
+    ```sh
+    docker-compose up --build
+    ```
+
 ## Metrics
 
 The exporter provides the following metrics:
