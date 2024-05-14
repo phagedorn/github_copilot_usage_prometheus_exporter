@@ -24,15 +24,16 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd github_exporter
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r requirements-dev.txt  # If you have a separate dev requirements file for testing tools
-
+        pip install pytest
     - name: Set PYTHONPATH
       run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
     - name: Run tests
       run: |
+        cd github_exporter
         pytest --maxfail=5 --disable-warnings --junitxml=pytest_report.xml --import-mode=append
 
     - name: Archive test results
