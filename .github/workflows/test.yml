@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: pytest_report.xml
+        path: /home/runner/work/github_copilot_usage_prometheus_exporter/github_copilot_usage_prometheus_exporter/github_exporter/tests/pytest_report.xml
