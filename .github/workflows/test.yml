@@ -24,7 +24,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd github_exporter
+        cd github_exporter/tests
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest
@@ -33,7 +33,7 @@ jobs:
 
     - name: Run tests
       run: |
-        cd github_exporter
+        cd github_exporter/tests
         pytest --maxfail=5 --disable-warnings --junitxml=pytest_report.xml --import-mode=append
 
     - name: Archive test results
@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: pytest_report.xml
+        path: tests/pytest_report.xml
