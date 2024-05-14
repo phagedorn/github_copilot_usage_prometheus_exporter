@@ -35,7 +35,9 @@ jobs:
       run: |
         cd github_exporter/tests
         pytest --maxfail=5 --disable-warnings --junitxml=pytest_report.xml --import-mode=append
-
+    - name:
+      run: |
+        find . -name pytest_report.xml -exec cp {} .. \;
     - name: Archive test results
       if: always()
       uses: actions/upload-artifact@v2
