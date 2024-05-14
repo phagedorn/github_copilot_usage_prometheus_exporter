@@ -25,4 +25,4 @@ USER appuser
 EXPOSE 8000
 
 # Run app.py when the container launches
-CMD [ "python", "./github-copilot-usage-prometheus-exporter.py" ]
+CMD [ "python", "./github_copilot_exporter.py" ]
